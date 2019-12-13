@@ -6,28 +6,28 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreatePostsTagsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    public function up()
-    {
-        Schema::create('post_tags', function (Blueprint $table) {
-					$table->bigIncrements('id');
-					$table->unsignedBigInteger('post_id');
-					$table->unsignedBigInteger('tag_id');
-					$table->timestamps();
-        });
-    }
+	/**
+	 * Run the migrations.
+	 *
+	 * @return void
+	 */
+	public function up()
+	{
+		Schema::create('post_tags', function (Blueprint $table) {
+			$table->bigIncrements('id');
+			$table->unsignedBigInteger('post_id');
+			$table->unsignedBigInteger('tag_id');
+			$table->timestamps();
+		});
+	}
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-			Schema::dropIfExists('post_tags');
-    }
+	/**
+	 * Reverse the migrations.
+	 *
+	 * @return void
+	 */
+	public function down()
+	{
+		Schema::dropIfExists('post_tags');
+	}
 }

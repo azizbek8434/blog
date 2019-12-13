@@ -6,28 +6,28 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateSubscriptionsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    public function up()
-    {
-        Schema::create('subscriptions', function (Blueprint $table) {
-						$table->bigIncrements('id');
-						$table->string('email');
-						$table->string('token')->nullable();
-            $table->timestamps();
-        });
-    }
+	/**
+	 * Run the migrations.
+	 *
+	 * @return void
+	 */
+	public function up()
+	{
+		Schema::create('subscriptions', function (Blueprint $table) {
+			$table->bigIncrements('id');
+			$table->string('email');
+			$table->string('token')->nullable();
+			$table->timestamps();
+		});
+	}
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::dropIfExists('subscriptions');
-    }
+	/**
+	 * Reverse the migrations.
+	 *
+	 * @return void
+	 */
+	public function down()
+	{
+		Schema::dropIfExists('subscriptions');
+	}
 }
